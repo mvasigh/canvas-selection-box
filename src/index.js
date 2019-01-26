@@ -1,5 +1,6 @@
 import './styles.css';
 
+const output = document.getElementById('output');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
@@ -31,12 +32,13 @@ function addMouseMoveListener(originX, originY) {
   canvas.addEventListener('mousemove', handleMouseMove);
   canvas.addEventListener('mouseup', () => {
     if (endX && endY) {
-      console.log({
+      const outputText = JSON.stringify({
         originX,
         originY,
         endX,
         endY
       });
+      output.innerHTML = `<span>${outputText}</span>`;
     }
     canvas.removeEventListener('mousemove', handleMouseMove);
   });
