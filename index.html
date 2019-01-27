@@ -6,8 +6,15 @@
   </head>
 
   <body>
-    <canvas id="canvas" height="600" width="600"></canvas> <br />
-    <code id="output">Click and drag to select an area</code>
+    <div class="container">
+      <canvas id="canvas" height="600" width="600"></canvas>
+      <div class="display">
+        <code id="output">Click and drag to select an area</code>
+        <ul id="list">
+          <!-- Selection history goes here -->
+        </ul>
+      </div>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
